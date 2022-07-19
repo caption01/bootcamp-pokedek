@@ -1,8 +1,12 @@
-import { Button, Image } from 'antd';
+import { Image } from 'antd';
+
+import { Button } from '@atomic';
+import { log } from '@utils';
 
 import pokemonLogoSrc from './assets/images/pokedex.png';
 
 function App() {
+  log('hello');
   return (
     <div className="App">
       Hello

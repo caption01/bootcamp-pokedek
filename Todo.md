@@ -9,3 +9,4 @@
   - [x] install dependencies.
   - [x] adding asset.
   - [x] restyling css and setup backgroud project.
+  - [x] setup alias path and profile folder structure with atomic system.
