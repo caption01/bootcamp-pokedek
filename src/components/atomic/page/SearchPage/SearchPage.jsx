@@ -1,11 +1,60 @@
-import { Logo } from '@atomic';
+import styled from 'styled-components';
+import { Row, Col } from 'antd';
+
+import { Logo, FilterDropdown } from '@atomic';
 import pokemonLogo from '@/assets/images/pokedex.png';
 
+import { regions, types, sortby } from './helper';
+
+const Container = styled.div`
+  text-align: center;
+`;
+
+const StyledRow = styled(Row)`
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 2rem;
+  padding: 2rem;
+`;
+
 const SearchPage = () => {
+  const regionDropdownItems = regions.map((r) => ({
+    ...r,
+    key: r?.name,
+    value: r?.name,
+    label: `${r?.name} (${r?.offset} - ${r?.limit + r?.offset})`
+  }));
+
+  const typeDropdownItems = types.map((t) => ({
+    key: t,
+    value: t,
+    label: t
+  }));
+
+  const sortbyDropdownItems = sortby.map((s) => ({
+    key: s,
+    value: s,
+    label: s
+  }));
+
   return (
-    <div>
-      <Logo src={pokemonLogo} width={300} />
-    </div>
+    <Container>
+      <Logo src={pokemonLogo} width={200} />
+      <StyledRow>
+        <Col xs={24} sm={12} md={6}>
+          <FilterDropdown label="REGION" items={regionDropdownItems} />
+        </Col>
+        <Col xs={24} sm={12} md={6}>
+          <FilterDropdown label="TYPE" items={typeDropdownItems} />
+        </Col>
+        <Col xs={24} sm={12} md={6}>
+          <FilterDropdown label="SORT BY" items={sortbyDropdownItems} />
+        </Col>
+        <Col xs={24} sm={12} md={6}>
+          <div>Search</div>
+        </Col>
+      </StyledRow>
+    </Container>
   );
 };
 
