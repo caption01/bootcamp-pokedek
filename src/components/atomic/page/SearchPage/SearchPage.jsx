@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { Row, Col } from 'antd';
 
-import { Logo, FilterDropdown } from '@atomic';
+import { Logo, FilterDropdown, Search } from '@atomic';
+
 import pokemonLogo from '@/assets/images/pokedex.png';
 
 import { regions, types, sortby } from './helper';
@@ -51,7 +52,7 @@ const SearchPage = () => {
           <FilterDropdown label="SORT BY" items={sortbyDropdownItems} />
         </Col>
         <Col xs={24} sm={12} md={6}>
-          <div>Search</div>
+          <Search />
         </Col>
       </StyledRow>
     </Container>
