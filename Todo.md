@@ -14,3 +14,4 @@
 - 3.Part 2 Build Search Page [ **feature/03-search-page** ]
   - [x] search page - header (Logo and Filters)
   - [x] search page - header (Search)
+  - [x] search page - add filters state

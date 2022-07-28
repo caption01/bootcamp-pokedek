@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 import { Text, DropdownMenu } from '@atomic';
@@ -14,17 +14,24 @@ const StyledDiv = styled.div`
     .ant-btn {
       font-size: 1rem;
       height: 3rem;
-      min-width: 20rem;
+      width: 20rem;
     }
   }
 `;
 
-const FilterDropdown = ({ label, items = [] }) => {
+const FilterDropdown = ({ label, items = [], onChange }) => {
   const [selectedItem, setSelectedItem] = useState(items[0]);
 
   const onItemSelect = ({ item }) => {
     setSelectedItem(item);
+    onChange?.(item);
   };
+
+  useEffect(() => {
+    if (!items) return;
+    const defaultItem = items[0];
+    onItemSelect({ item: defaultItem });
+  }, [items]);
 
   return (
     <StyledDiv>

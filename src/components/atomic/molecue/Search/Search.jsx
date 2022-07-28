@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 import { Input, Text } from '@atomic';
@@ -14,16 +14,17 @@ const StyledDiv = styled.div`
     .ant-input {
       font-size: 1rem;
       height: 3rem;
-      min-width: 20rem;
+      width: 20rem;
     }
   }
 `;
 
-const Search = ({ label = 'SEARCH', placeholder, ...props }) => {
+const Search = ({ label = 'SEARCH', placeholder, onChange, ...props }) => {
   const [value, setValue] = useState('');
 
   const onSearchChange = (value) => {
     setValue(value);
+    onChange?.(value);
   };
 
   return (
