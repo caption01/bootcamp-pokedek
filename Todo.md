@@ -12,3 +12,7 @@
   - [x] setup alias path and profile folder structure with atomic system.
   - [x] setup app route
 - 3.Part 2 Build Search Page [ **feature/03-search-page** ]
+  - [x] search page - header (Logo and Filters)
+  - [x] search page - header (Search)
+  - [x] search page - add filters state
+  - [x] search page - pokemon card 
