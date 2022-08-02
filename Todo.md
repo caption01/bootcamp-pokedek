@@ -15,3 +15,4 @@
   - [x] search page - header (Logo and Filters)
   - [x] search page - header (Search)
   - [x] search page - add filters state
+  - [x] search page - pokemon card 

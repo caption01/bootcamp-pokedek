@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 import { Dropdown as DropdownAntd, Space } from 'antd';
-import { DownOutlined } from '@ant-design/icons';
 
-import { Button } from '@atomic';
+import { Button, Icon } from '@atomic';
 
 const StyleSpace = styled(Space)`
   display: flex;
@@ -15,7 +14,7 @@ const Dropdown = ({ title = 'select', menu }) => {
       <Button width="100%">
         <StyleSpace>
           {title}
-          <DownOutlined />
+          <Icon name={'arrowDown'} />
         </StyleSpace>
       </Button>
     </DropdownAntd>
