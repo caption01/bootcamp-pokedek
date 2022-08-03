@@ -18,3 +18,4 @@
   - [x] search page - pokemon card 
 - 4.Part 3 Build PokemonInfo Page [ **feature/04-pokemon-info-page** ]
   - [x] pokemon info page - pokemoninfo card
+  - [x] pokemon info page - routing back to search page
