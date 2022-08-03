@@ -16,3 +16,5 @@
   - [x] search page - header (Search)
   - [x] search page - add filters state
   - [x] search page - pokemon card 
+- 4.Part 3 Build PokemonInfo Page [ **feature/04-pokemon-info-page** ]
+  - [x] pokemon info page - pokemoninfo card
