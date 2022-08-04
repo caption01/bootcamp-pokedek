@@ -1,4 +1,4 @@
-export const getColorByType = (type) => {
+const getColorByType = (type) => {
   switch (type) {
     case 'grass':
       return '#a8ff98';
@@ -41,7 +41,7 @@ export const getColorByType = (type) => {
   }
 };
 
-export const colorTypeGradients = (type1, type2, length) => {
+const colorTypeGradients = (type1, type2, length) => {
   let color1, color2;
 
   color1 = getColorByType(type1);
@@ -49,3 +49,27 @@ export const colorTypeGradients = (type1, type2, length) => {
 
   return [color1, color2];
 };
+
+const getCardColorsByPokemonTypes = (pokemonTypes = []) => {
+  const bgColors = colorTypeGradients(
+    pokemonTypes[0]?.type.name,
+    pokemonTypes[1]?.type.name,
+    pokemonTypes?.length
+  );
+
+  return bgColors;
+};
+
+const getHeight = (pokemonHeight) => {
+  return `${pokemonHeight / 10} m/${`${Math.floor(
+    (pokemonHeight / 10) * 3.28
+  )}'${Math.round((((pokemonHeight / 10) * 3.28) % 1) * 12)}"`}`;
+};
+
+const getWeight = (pokemonWeight) => {
+  return `${(pokemonWeight / 10).toFixed(1)} kg/${(
+    pokemonWeight * 0.2205
+  ).toFixed(1)} lbs`;
+};
+
+export { getHeight, getWeight, getCardColorsByPokemonTypes };

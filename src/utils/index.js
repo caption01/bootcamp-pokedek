@@ -1,2 +1,2 @@
-export * from './logger';
-export * from './color';
+export * from './pokemonInfo';
+export * from './pokemon';

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Row, Col } from 'antd';
 
 import { Logo, FilterDropdown, Search, PokemonCard } from '@atomic';
+import { pokemonInfo } from '@utils';
 
 import pokemonLogo from '@/assets/images/pokedex.png';
 
@@ -63,29 +64,6 @@ const SearchPage = () => {
 
   const pokemonFilters = getFetchPokemonFilters(filters);
 
-  const pokemon = {
-    id: 1,
-    name: 'bulbasaur',
-    types: [
-      {
-        slot: 1,
-        type: {
-          name: 'grass',
-          url: 'https://pokeapi.co/api/v2/type/12/'
-        }
-      },
-      {
-        slot: 2,
-        type: {
-          name: 'poison',
-          url: 'https://pokeapi.co/api/v2/type/4/'
-        }
-      }
-    ],
-    images:
-      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg'
-  };
-
   return (
     <Container>
       <Logo src={pokemonLogo} width={200} />
@@ -121,7 +99,7 @@ const SearchPage = () => {
       </StyledRow>
       <PokemonContainer>
         {[1, 2, 3, 4, 5, 6, 7, 8].map((x) => (
-          <PokemonCard key={x} pokemon={pokemon} />
+          <PokemonCard key={x} pokemon={pokemonInfo} />
         ))}
       </PokemonContainer>
     </Container>
