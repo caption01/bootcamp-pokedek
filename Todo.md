@@ -21,3 +21,4 @@
   - [x] pokemon info page - routing back to search page
 - 5.Part 4 Connect Our App with Pokemon API [ **feature/05-api** ]
   - [x] api - add fetch pokemon list into search page
+  - [x] api - add fetch pokemon info and species in pokemon info page

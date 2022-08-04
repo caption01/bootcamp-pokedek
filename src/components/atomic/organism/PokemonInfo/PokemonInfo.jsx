@@ -22,10 +22,10 @@ const PokemonInfo = ({ pokemon }) => {
       <Text>#{pokemon?.id}</Text>
       <Text>Name: {pokemon?.name}</Text>
       <StyledImage>
-        <img src={pokemon.images} width="100%" />
+        <img src={pokemon?.image} width="100%" />
       </StyledImage>
       <Text fontSize="0.8">Height: {getHeight(pokemon?.height)}</Text>
-      <Text fontSize="0.8">Weight: {getWeight(pokemon.weight)}</Text>
+      <Text fontSize="0.8">Weight: {getWeight(pokemon?.weight)}</Text>
     </InfoWrapper>
   );
 };

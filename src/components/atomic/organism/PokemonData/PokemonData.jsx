@@ -16,9 +16,7 @@ const PokemonData = ({ pokemon }) => {
     <DataWrapper>
       <Text>About</Text>
       <Content>
-        <Text fontSize={0.8}>
-          {pokemon?.flavor_text_entries[0]?.flavor_text_entries}
-        </Text>
+        <Text fontSize={0.8}>{pokemon?.about}</Text>
       </Content>
       <Text>Abilities</Text>
       <Content>
