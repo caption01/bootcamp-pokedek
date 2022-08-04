@@ -19,3 +19,5 @@
 - 4.Part 3 Build PokemonInfo Page [ **feature/04-pokemon-info-page** ]
   - [x] pokemon info page - pokemoninfo card
   - [x] pokemon info page - routing back to search page
+- 5.Part 4 Connect Our App with Pokemon API [ **feature/05-api** ]
+  - [x] api - add fetch pokemon list into search page
